@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.eric.mapper.StaticDataMapper" >
+  <resultMap id="BaseResultMap" type="com.eric.entity.StaticData" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="data_type" property="dataType" jdbcType="VARCHAR" />
+    <id column="data_value" property="dataValue" jdbcType="VARCHAR" />
+    <result column="data_name" property="dataName" jdbcType="VARCHAR" />
+    <result column="data_desc" property="dataDesc" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>
