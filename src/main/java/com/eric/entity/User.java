@@ -1,5 +1,8 @@
 package com.eric.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.Date;
 import javax.persistence.*;
 
@@ -19,6 +22,7 @@ public class User {
     /**
      * md5加密后的密码
      */
+    @JsonIgnore
     private String password;
 
     /**
@@ -30,12 +34,14 @@ public class User {
      * 用户创建时间
      */
     @Column(name = "create_time")
+    @JsonFormat(pattern = "yyyy-MM-dd hh:mm:ss", locale = "zh", timezone = "GMT+8")
     private Date createTime;
 
     /**
      * 用户最后登录时间
      */
     @Column(name = "last_login_time")
+    @JsonFormat(pattern = "yyyy-MM-dd hh:mm:ss", locale = "zh", timezone = "GMT+8")
     private Date lastLoginTime;
 
     /**

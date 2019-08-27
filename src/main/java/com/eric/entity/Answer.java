@@ -1,5 +1,7 @@
 package com.eric.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 import javax.persistence.*;
 
@@ -36,6 +38,7 @@ public class Answer {
      * 回答时间
      */
     @Column(name = "answer_time")
+    @JsonFormat(pattern = "yyyy-MM-dd hh:mm:ss", locale = "zh", timezone = "GMT+8")
     private Date answerTime;
 
     /**

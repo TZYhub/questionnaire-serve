@@ -1,5 +1,7 @@
 package com.eric.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 import javax.persistence.*;
 
@@ -32,12 +34,14 @@ public class Questionnaire {
      * 问卷创建时间
      */
     @Column(name = "create_time")
+    @JsonFormat(pattern = "yyyy-MM-dd hh:mm:ss", locale = "zh", timezone = "GMT+8")
     private Date createTime;
 
     /**
      * 问卷修改时间
      */
     @Column(name = "update_time")
+    @JsonFormat(pattern = "yyyy-MM-dd hh:mm:ss", locale = "zh", timezone = "GMT+8")
     private Date updateTime;
 
     /**
@@ -50,12 +54,14 @@ public class Questionnaire {
      * 问卷开始发布时间
      */
     @Column(name = "start_time")
+    @JsonFormat(pattern = "yyyy-MM-dd hh:mm:ss", locale = "zh", timezone = "GMT+8")
     private Date startTime;
 
     /**
      * 问卷结束时间
      */
     @Column(name = "end_time")
+    @JsonFormat(pattern = "yyyy-MM-dd hh:mm:ss", locale = "zh", timezone = "GMT+8")
     private Date endTime;
 
     /**
