@@ -10,9 +10,9 @@ public interface IUserService {
 
     int updateUser(User user) throws Exception;
 
-    int deleteUser(String userId) throws Exception;
+    int deleteUser(int userId) throws Exception;
 
-    User queryByUserId(String userId) throws Exception;
+    User queryByUserId(int userId) throws Exception;
 
     List<User> queryUserList(User user) throws Exception;
 

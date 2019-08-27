@@ -25,17 +25,17 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
-    public int deleteUser(String userId) throws Exception {
+    public int deleteUser(int userId) throws Exception {
         return userMapper.deleteByPrimaryKey(userId);
     }
 
     @Override
-    public User queryByUserId(String userId) throws Exception {
-        return userMapper.selectByPrimaryKey(Integer.parseInt(userId));
+    public User queryByUserId(int userId) throws Exception {
+        return userMapper.selectByPrimaryKey(userId);
     }
 
     @Override
     public List<User> queryUserList(User user) throws Exception {
-        return null;
+        return userMapper.select(user);
     }
 }
